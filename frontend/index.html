@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Files</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+
+<body class="bg-[#2D2D2D] text-white">
+
+    <header>
+        <nav class="w-full h-10 bg-[#155539] text-center flex items-center justify-center">
+            <p>Made By 
+                <a class="text-[#00FFE1] underline" target="_blank" href="https://portfolio-georgejrdev.vercel.app">George Júnior</a>
+            </p>
+        </nav>
+        
+        <h1 class="text-6xl text-center mt-32 font-light w-[90%] mx-auto">Convert Video</h1>
+    </header>
+
+    <main class="flex items-center justify-center w-full mt-20">
+        
+        <form class="space-y-7">
+            
+            <input class="hidden" type="file" id="file" multiple required>
+            <input class="block bg-[#7B7B7B] w-36 h-10 cursor-pointer font-bold" type="button" value="Select Files" onclick="document.getElementById('file').click()">
+            
+            <div id="extension">
+                <label for="extension-input" class="block w-36 h-5 bg-[#4FBB6C] text-center cursor-pointer font-bold">To..</label>
+              
+                <input class="block w-36 h-5 bg-[#4FBB6C] text-center cursor-pointer pl-4" list="extensions" id="extension-input" name="extension-input">
+              
+                <datalist id="extensions">
+                    <option value="mp4">
+                    <option value="mkv">
+                    <option value="mov">
+                </datalist>
+            </div>
+            
+            <input class="block w-36 h-10 bg-[#37874C] cursor-pointer font-bold" type="button" value="Convert File">
+        </form>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
